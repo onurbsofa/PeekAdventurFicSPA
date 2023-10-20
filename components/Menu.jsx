@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import {Link, Router} from 'react-router-dom'
 
 export default function Menu() {
     const [selectedItem, setSelectedItem] = useState(null)
@@ -11,9 +11,12 @@ export default function Menu() {
         <h2>Historias</h2>
         <p>{selectedItem && <p>Historia Seleccionada: {selectedItem}</p>}</p>
       <ul>
+        
         {items.map((item, index) => (
           <li key={index} onClick={() => setSelectedItem(item)}>
-           <button className='historias'>{item}</button> 
+            <Link to={`/historia/${item}`}>
+              <button className='historias'>{item}</button> 
+            </Link>
           </li>
         ))}
       </ul>

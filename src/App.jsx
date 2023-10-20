@@ -1,13 +1,16 @@
 import './App.css'
 import Menu from '../components/Menu'
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
   
 
   return (
-    <>
-      <Menu/>
-    </>
+    <Router>
+    <Routes>
+      <Route path="/" element={<Menu/>} />
+    </Routes>
+  </Router>
   )
 }
 
