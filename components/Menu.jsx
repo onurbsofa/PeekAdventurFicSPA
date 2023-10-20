@@ -11,7 +11,6 @@ export default function Menu() {
         <h2>Historias</h2>
         <p>{selectedItem && <p>Historia Seleccionada: {selectedItem}</p>}</p>
       <ul>
-        
         {items.map((item, index) => (
           <li key={index} onClick={() => setSelectedItem(item)}>
             <Link to={`/historia/${item}`}>
