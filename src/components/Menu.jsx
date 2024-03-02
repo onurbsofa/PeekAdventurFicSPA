@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Link, Router} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function Menu() {
     const [selectedItem, setSelectedItem] = useState(null)
@@ -7,8 +7,9 @@ export default function Menu() {
     const items = ['juego de animales', 'hielo movil', 'el pinguino', 'el oso']
   return (
     <div>
-        <h1>Menú</h1>
-        <h2>Historias</h2>
+      <div className='banner'>
+        <h1>Historias</h1>
+      </div>
         <p>{selectedItem && <p>Historia Seleccionada: {selectedItem}</p>}</p>
       <ul>
         {items.map((item, index) => (

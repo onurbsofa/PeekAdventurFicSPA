@@ -1,6 +1,6 @@
 import './App.css'
-import Menu from '../components/Menu'
-import Historia from '../components/Historia'
+import Menu from './components/Menu'
+import Historia from './components/Historia'
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
